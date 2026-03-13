@@ -23,7 +23,10 @@ struct ContentView: View {
                     // Game List
                     ScrollView {
                         VStack(spacing: 12) {
-                            GameCard(title: "Wordle", description: "Guess the hidden word in 6 attempts", emoji: "💬", color: .green)
+                            NavigationLink(destination: WordleView()) {
+                                GameCard(title: "Wordle", description: "Guess the hidden word in 6 attempts", emoji: "💬", color: .green)
+                            }
+                            .buttonStyle(.plain)
                             GameCard(title: "Shikaku", description: "Divide the grid using number clues", emoji: "⬛", color: .blue)
                             GameCard(title: "Connections", description: "Find the hidden link between word groups", emoji: "🔗", color: .purple)
                         }
