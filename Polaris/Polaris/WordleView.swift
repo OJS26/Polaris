@@ -62,6 +62,10 @@ struct WordleView: View {
         .onAppear {
             answer = WordleView.loadRandomWord()
         }
+        
+        .onDisappear {
+            resetGame()
+        }
     }
     
     func handleKey(_ key: String) {
